@@ -37,7 +37,7 @@ struct UnitSwitcher: View {
                     .cornerRadius(5)
             }
         }
-        .frame(width: 85, height: 30)
+        .frame(width: 168, height: 20)
         .background(Color.gray.opacity(0.2))
         .cornerRadius(10)
     }

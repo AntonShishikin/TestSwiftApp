@@ -70,6 +70,7 @@ struct ProductCard: View {
                         if isInCart {
                             VStack(spacing: 0){
                                 UnitSwitcher(selectedUnit: $selectedUnit)
+                                    .padding(.bottom, 5)
                                 
                                 AddToCartButton(quantity: $quantity, pricePerUnit: product.price, selectedUnit: $selectedUnit)
                             }
@@ -114,7 +115,7 @@ struct ProductCard: View {
                     .padding(.horizontal, 8)
                     .padding(.vertical, 4)
                     .background(Color.red)
-                    .cornerRadius(10, corners: [.bottomRight, .topLeft])
+                    .CustomCornerRadius(10, corners: [.bottomRight, .topLeft])
                     .zIndex(1)
             }
             
@@ -135,12 +136,13 @@ struct ProductCard: View {
             }
             .padding(.trailing, 8)
             .padding(.top, 8)
+            .frame(width: 168, height: 278)
         }
     }
 }
 
 extension View {
-    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+    func CustomCornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         clipShape(RoundedCorner(radius: radius, corners: corners))
     }
 }

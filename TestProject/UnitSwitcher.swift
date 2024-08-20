@@ -19,10 +19,12 @@ struct UnitSwitcher: View {
                 Text("Шт")
                     .font(.system(size: 14, weight: .regular))
                     .foregroundColor(selectedUnit == "Шт" ? .black : .gray)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 5)
-                    .background(selectedUnit == "Шт" ? Color.white : Color.gray.opacity(0.2))
-                    .cornerRadius(5)
+                    .padding(.horizontal, 28)
+                    .padding(.vertical, 0)
+                    .background(selectedUnit == "Шт" ? Color.white : Color.gray.opacity(0.0))
+                    .cornerRadius(10)
+                    .multilineTextAlignment(.center)
+                
             }
             
             Button(action: {
@@ -31,15 +33,16 @@ struct UnitSwitcher: View {
                 Text("Кг")
                     .font(.system(size: 14, weight: .regular))
                     .foregroundColor(selectedUnit == "Кг" ? .black : .gray)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 5)
-                    .background(selectedUnit == "Кг" ? Color.white : Color.gray.opacity(0.2))
+                    .padding(.horizontal, 28)
+                    .padding(.vertical, 0)
+                    .background(selectedUnit == "Кг" ? Color.white : Color.gray.opacity(0.0))
                     .cornerRadius(5)
+                    .multilineTextAlignment(.center)
             }
         }
-        .frame(width: 168, height: 20)
+        .frame(width: 160, height: 20)
         .background(Color.gray.opacity(0.2))
-        .cornerRadius(10)
+        .cornerRadius(5)
     }
 }
 
@@ -52,3 +55,5 @@ struct UnitSwitcher_Previews: PreviewProvider {
             .padding()
     }
 }
+
+

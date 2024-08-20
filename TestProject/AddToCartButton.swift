@@ -26,9 +26,9 @@ struct AddToCartButton: View {
                     .frame(width: 30, height: 30)
                     .background(Color.green)
                     .cornerRadius(15)
+                    .zIndex(1)
             }
             
-            Spacer()
             
             VStack(spacing: 0) {
                 Text("\(quantity, specifier: "%.1f") \(selectedUnit)")
@@ -40,10 +40,8 @@ struct AddToCartButton: View {
             }
             .padding(.horizontal, 10)
             .padding(.vertical, 5)
-            .background(Color.green)
-            .cornerRadius(15)
-            
-            Spacer()
+     
+            .zIndex(0)
             
             Button(action: {
                 quantity += 0.1
@@ -56,8 +54,12 @@ struct AddToCartButton: View {
                     .cornerRadius(15)
             }
         }
-        .frame(width: 150, height: 50)
-        .padding(8)
+        .background(Rectangle()
+                        .fill(Color.green)
+                        .frame(width: 160, height: 36)
+                        .cornerRadius(40))
+        .frame(minWidth: 160, maxHeight: 36)
+        .padding(0)
     }
 }
 

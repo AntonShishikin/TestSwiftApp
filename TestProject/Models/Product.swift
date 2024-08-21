@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Product: Identifiable{
     let id: UUID = UUID()
@@ -15,6 +16,8 @@ struct Product: Identifiable{
     let price: Double
     let lastPrice: Double
     let specialMark: String
+    var specialMarkColor: Color
+    let reviewsCount: Int
     let imageName: String
 }
 

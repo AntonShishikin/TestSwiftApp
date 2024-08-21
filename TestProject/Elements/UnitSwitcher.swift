@@ -22,7 +22,7 @@ struct UnitSwitcher: View {
                     .padding(.horizontal, 28)
                     .padding(.vertical, 0)
                     .background(selectedUnit == "Шт" ? Color.white : Color.gray.opacity(0.0))
-                    .cornerRadius(10)
+                    .cornerRadius(5)
                     .multilineTextAlignment(.center)
                 
             }

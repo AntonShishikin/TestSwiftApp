@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct TestProjectApp: App {
+    @StateObject var cart = Cart()
+    
     var body: some Scene {
         WindowGroup {
             ProductListView()
+                .background(Color.white)
+                .environmentObject(cart)
         }
     }
 }

@@ -62,14 +62,18 @@ struct ProductRow: View {
                     
                     HStack {
                         if !isInCart {
-                            Text("\(product.price, specifier: "%.2f") ₽/кг")
-                                .font(.system(size: 16, weight: .bold))
-                                .foregroundColor(.black)
-                            
-                            Text("\(product.lastPrice, specifier: "%.2f") ₽")
-                                .strikethrough(true, color: .gray)
-                                .font(.footnote)
-                                .foregroundColor(.gray)
+                            VStack(alignment: .leading){
+                                Text("\(product.price, specifier: "%.2f") ₽/кг")
+                                    .font(.system(size: 16, weight: .bold))
+                                    .foregroundColor(.black)
+                                    .lineLimit(1)
+                                
+                                Text("\(product.lastPrice, specifier: "%.2f") ₽")
+                                    .strikethrough(true, color: .gray)
+                                    .font(.footnote)
+                                    .foregroundColor(.gray)
+                            }
+                            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
                         }
                         
                         if isInCart {
